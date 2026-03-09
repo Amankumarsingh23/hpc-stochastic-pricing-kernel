@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  # ── Streamlit Interactive Dashboard ────────────────────────
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: hpc_pricing_dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONPATH=/app
+      - OMP_NUM_THREADS=4
+    command: >
+      streamlit run app.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.headless=true
+      --browser.gatherUsageStats=false
+    restart: unless-stopped
+
+  # ── FastAPI REST API ────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: hpc_pricing_api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - OMP_NUM_THREADS=4
+    command: >
+      uvicorn python.api.main:app
+      --host 0.0.0.0
+      --port 8000
+      --workers 2
+    restart: unless-stopped
