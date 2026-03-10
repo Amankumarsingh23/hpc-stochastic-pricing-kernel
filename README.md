@@ -45,7 +45,7 @@ Six fully interactive tabs. Every parameter — spot, strike, volatility, rate, 
 ### Tab 1 — Pricing
 > All four engines priced simultaneously. Live pricing summary table with error vs Black-Scholes and execution time per method. Option price vs spot curve (intrinsic value, COS, Black-Scholes overlay). 95% Monte Carlo confidence interval visualised.
 
-![Pricing Tab](https://raw.githubusercontent.com/YOUR_USERNAME/hpc-pricing-kernel/main/docs/screenshots/01_pricing.png)
+![Pricing Tab](https://raw.githubusercontent.com/Amankumarsingh23hpc-pricing-kernel/main/docs/screenshots/01_pricing.png)
 
 **What you see at S=K=100, σ=20%, r=5%, T=1yr:**
 | Method | Price | Error vs BS | Time |
@@ -60,7 +60,7 @@ Six fully interactive tabs. Every parameter — spot, strike, volatility, rate, 
 ### Tab 2 — Greeks
 > Five Greek gauges (Δ, Γ, ν, Θ, ρ) with live values and units. Four-panel surface showing each Greek plotted against the full spot price range. Green = positive exposure, pink/red = negative.
 
-![Greeks Tab](https://raw.githubusercontent.com/YOUR_USERNAME/hpc-pricing-kernel/main/docs/screenshots/02_greeks.png)
+![Greeks Tab](https://raw.githubusercontent.com/Amankumarsingh23/hpc-pricing-kernel/main/docs/screenshots/02_greeks.png)
 
 **Live Greek values at ATM (S=K=100, analytical Black-Scholes):**
 ```
@@ -77,7 +77,7 @@ The surface plots confirm textbook shapes: Delta is a sigmoid (0→1), Gamma is 
 ### Tab 3 — Benchmark
 > Direct method comparison: execution time on log scale (left) and absolute pricing error vs closed-form Black-Scholes (right). Demonstrates the speed/accuracy tradeoff across all four engines.
 
-![Benchmark Tab](https://raw.githubusercontent.com/YOUR_USERNAME/hpc-pricing-kernel/main/docs/screenshots/03_benchmark.png)
+![Benchmark Tab](https://raw.githubusercontent.com/Amankumarsingh23/hpc-pricing-kernel/main/docs/screenshots/03_benchmark.png)
 
 **Key insight from the benchmark:**
 - COS (N=256) achieves **5.51×10⁻¹⁴** error vs Black-Scholes — effectively machine precision — while remaining under 3ms
@@ -90,7 +90,7 @@ The surface plots confirm textbook shapes: Delta is a sigmoid (0→1), Gamma is 
 ### Tab 4 — Vol Surface
 > Interactive 3D pricing surface rendered across a grid of strikes (60–140) and maturities (0.5–3yr). Switchable between Black-Scholes, COS, and Monte Carlo engines. Also includes a 2D heatmap view.
 
-![Vol Surface Tab](https://raw.githubusercontent.com/YOUR_USERNAME/hpc-pricing-kernel/main/docs/screenshots/04_vol_surface.png)
+![Vol Surface Tab](https://raw.githubusercontent.com/Amankumarsingh23/hpc-pricing-kernel/main/docs/screenshots/04_vol_surface.png)
 
 The surface correctly captures:
 - **Time value** — prices increase with maturity (more time = more uncertainty)
@@ -103,7 +103,7 @@ The surface correctly captures:
 ### Tab 5 — Exotic Options
 > Four exotic option types priced simultaneously via Monte Carlo (50k paths). Live price cards with % premium/discount vs vanilla European. Payoff profile chart shows all four across the full spot range, with current spot (S=100) and barrier level (B=125) annotated.
 
-![Exotic Options Tab](https://raw.githubusercontent.com/YOUR_USERNAME/hpc-pricing-kernel/main/docs/screenshots/05_exotic_options.png)
+![Exotic Options Tab](https://raw.githubusercontent.com/Amankumarsingh23/hpc-pricing-kernel/main/docs/screenshots/05_exotic_options.png)
 
 **Exotic prices at S=K=100, σ=20%, r=5%, T=1yr, Barrier B=125:**
 ```
@@ -120,7 +120,7 @@ The payoff profile chart shows the Barrier call collapsing to zero past the knoc
 ### Tab 6 — Convergence
 > Dual log-log convergence plots and detailed tables. Left: Monte Carlo error vs path count, with O(1/√N) reference line. Right: COS error vs number of Fourier terms. Demonstrates the fundamental difference between stochastic (slow, noisy) and spectral (exponential, deterministic) convergence.
 
-![Convergence Tab](https://raw.githubusercontent.com/YOUR_USERNAME/hpc-pricing-kernel/main/docs/screenshots/06_convergence.png)
+![Convergence Tab](https://raw.githubusercontent.com/Amankumarsingh23/hpc-pricing-kernel/main/docs/screenshots/06_convergence.png)
 
 **Monte Carlo convergence (statistical — O(1/√N)):**
 ```
