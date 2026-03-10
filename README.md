@@ -2,11 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=F0B429&height=200&section=header&text=HPC%20Stochastic%20Pricing%20Kernel&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=C%2B%2B17%20%C2%B7%20OpenMP%20%C2%B7%20pybind11%20%C2%B7%20Monte%20Carlo%20%C2%B7%20COS%20%C2%B7%20LSMC&descAlignY=58&descSize=16&descColor=ffffffcc" />
 
-<br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=700&size=22&duration=3000&pause=800&color=F0B429&center=true&vCenter=true&multiline=true&width=750&height=80&lines=⚡+Four+Engines.+One+Dashboard.+Machine+Precision.;📈+European+%7C+American+%7C+Exotic+Options+Live." alt="Typing SVG" />
-
-<br/>
 
 [![Live Demo](https://img.shields.io/badge/🚀%20LIVE%20DEMO-hpc--stochastic--pricing--kernel.streamlit.app-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://hpc-stochastic-pricing-kernel.streamlit.app/)
 &nbsp;&nbsp;
